@@ -1,0 +1,91 @@
+//@import 'libs/bootstrap-reboot.min';
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/bg.png");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top {
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 10px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        display: block;
+        padding: 5px 20px;
+        background-color: #16A177;
+        border: 1px solid #16A177;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: all 0.5s;
+        &:hover {
+            background-color: #fff;
+            border: 1px solid #16A177;
+            color: #16A177;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.list {
+    &__container {
+        width: 1000px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px 30px;
+    }
+    &__menu {
+        width: 100%;
+        padding-top: 20px;
+    }
+    &__list {
+        width: 100%;
+        border: 1px solid #16A177;
+        margin-top: 10px;
+
+    }
+    &__link {
+        display: inline-block;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 40px;
+        text-decoration: none;
+        color: #16A177;
+        &:hover {
+            color: #fff;
+            background-color: #16A177;
+        }
+        
+    }
+
+}
+
+//* -----------------------------------
+
+@import "../sass/blocks/00_index";
+@import "../sass/blocks/01_html_1";
+@import "../sass/blocks/02_html_2";
+@import "../sass/blocks/03_html_3";
+@import "../sass/blocks/04_html_4";
+
+
+
+
+
+
+
+

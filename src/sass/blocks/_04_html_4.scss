@@ -1,0 +1,114 @@
+.bees {
+    font-family: Arial, Helvetica, sans-serif;
+    &__container {
+        width: 1100px;
+        margin: 0 auto;
+    }
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+    }
+    &__head, &__footer {
+        width: 100%;
+        background-color: #242424;
+    }
+    &__menu {
+        display: flex;
+        min-height: 50px;
+    }
+    &__link {
+        color: #fff;
+        font-size: 19px;
+        text-decoration: none;
+        line-height: 50px;
+        padding: 0 20px;
+        &:hover {
+            background-color: #585858;
+        }
+    }
+    &__active {
+        background-color: #585858;
+    }
+
+    &__left, &__right {
+        width: 290px;
+        margin: 10px;
+    }
+    &__title_fz17 {
+        font-size: 17px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    &__text_fz13, &__list_r {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    &__main {
+        width: 520px;
+        margin: 10px;
+        img {
+            width: 500px;
+        }
+    }
+    
+    &__title_fz21 {
+        font-size: 21px;
+        text-align: left;
+    }
+    &__title_fz19 {
+        font-size: 19px;
+    }
+
+    &__right {
+        img {
+            display: inline-block;
+            width: 260px;
+            height: 168px;
+            margin: 10px 0;
+        }
+    }
+    &__menu_r {
+        padding-left: 0;
+        list-style-type: none;
+        margin: 0;
+    }
+    &__list_r {
+        margin-bottom: 10px;
+    }
+
+    &__center {
+        text-align: center;
+    }
+
+    &__footer {
+        padding: 30px 0 20px;
+        font-size: 13px;
+        &_wrp {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        &_block {
+            width: 250px;
+            height: 200px;
+            background-color: #ebebeb;
+        } 
+        &_textfz12 {
+            font-size: 12px;
+            text-align: center;
+        } 
+        &_line {
+            width: 100%;
+            border-top:1px solid #9a9a9a;
+        } 
+        &_copy {
+            color: #fff;
+            text-align: center;
+        } 
+    }
+}

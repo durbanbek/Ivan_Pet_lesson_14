@@ -1,0 +1,42 @@
+.animate {
+    &__container {
+        width: 1000px;
+        padding: 40px 20px;
+        background-color: #fff;
+        margin: 0 auto;
+    }
+    &__btn {
+        width: 100px;
+        font-size: 16px;
+        padding: 10px 0;
+        background-color: yellow;
+        cursor: pointer;
+        border: none;
+    }
+    &__block {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        margin-top: 10px;
+    }
+    &__box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    &__wrapp {
+        display: flex;
+        width: 100%;
+        padding: 20px 10px;
+        background-color: rgb(155, 155, 155);
+        margin-top: 10px;
+    }
+    &__item {
+        width: 55px;
+        height: 30px;
+        background-color: yellow;
+        margin: 0 2px;
+    }
+}
