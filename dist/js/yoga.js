@@ -128,7 +128,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
         statusMassage.classList.add('status');
 
-    //* отправка запроса на сервер php
+    //* отправка данных на сервер php
 
     // form.addEventListener('submit', function(event) {
     //     event.preventDefault(); //* отмена стандартного поведения браузера
@@ -156,7 +156,52 @@ window.addEventListener('DOMContentLoaded', function() {
     //     }
     // });
 
-    //* Отправка данных в формате json
+    //* Отправка данных на сервер php в формате json
+
+    let formId = document.getElementById('form'),
+        inputId = formId.getElementsByTagName('input'),
+        statusMassageId = document.createElement('div');
+
+    statusMassageId.classList.add('status');
+
+    let status = statusMassageId;
+
+    status.style.marginTop = '10px';
+    status.style.color = 'white';
+
+    formId.addEventListener('submit', function(event) {
+        event.preventDefault(); //* отмена стандартного поведения браузера
+        formId.appendChild(statusMassageId);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', '../php/server.php');
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        let formData = new FormData(formId);
+
+        let obj = {};
+        formData.forEach(function(value, key) {
+            obj[key] = value;
+        });
+
+        let json = JSON.stringify(obj);
+
+        request.send(json);
+
+        request.addEventListener('readystatechange', function() {
+            if (request.readyState < 4) {
+                statusMassageId.innerHTML = massage.loading;
+            } else if (request.readyState === 4 && request.status == 200) {
+                statusMassageId.innerHTML = massage.success;
+            } else {
+                statusMassageId.innerHTML = massage.failure;
+            }
+        });
+
+        for (let i = 0; i < inputId.length; i++) {
+            inputId[i].value = '';
+        }
+    });
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); //* отмена стандартного поведения браузера
